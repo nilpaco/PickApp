@@ -61,10 +61,6 @@ body {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
   /* Remove the padding we set earlier */
   .header,
   .marketing,
@@ -83,14 +79,10 @@ body {
 }
 .image-back{
   background-image: url(http://placehold.it/350x350);
-  height: 350px;
+  height: 500px;
   background-position: center center;
   background-repeat:  no-repeat;
   background-size:  cover;
-}
-.padding{
-  padding-top: 25px;
-  padding-bottom: 25px;
 }
 .center-img{
   margin: auto;
@@ -101,4 +93,30 @@ body {
   flex-direction: column;  /* make main axis vertical */
   justify-content: center; /* center items vertically, in this case */
   align-items: center;     /* center items horizontally, in this case */
+}
+.content > div{
+  display: inline-block;
+}
+.center{
+  text-align: center;
+  margin-top: 120px;
+}
+.newsletter{
+  margin-top: 80px;
+}
+.input{
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  background-color: rgba(255,255,255,0.80);
+}
+.input:focus{
+  outline: none;
+  background-color: white;
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+
 }
