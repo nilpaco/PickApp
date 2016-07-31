@@ -120,3 +120,120 @@ body {
   transition: background-color 500ms linear;
 
 }
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.cf:before,
+.cf:after {
+    content:'';
+    display:table;
+}
+.cf:after {
+    clear:both;
+}
+
+.iphone6-container{
+  background:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/15489/iphone6.jpg') no-repeat;
+  background-size:cover;
+  height:500px;
+  width:238.21px;
+  position:relative;
+  background-size: 238.21px 500px;
+}
+
+.page-container{
+  overflow:hidden;
+  position:absolute;
+  bottom: 62px;
+  top: 77px;
+  left: 16px;
+  right: 15px;
+}
+
+.page-nav{
+  box-shadow:0 0 10px 3px rgba(0,0,0,.35);
+  position:relative;
+  z-index:2;
+}
+
+.page-nav-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+
+  & > li{
+    background:#60b3c1;
+    border-bottom:3px solid transparent;
+    color:#ffffff;
+    cursor:pointer;
+    display:block;
+    float:left;
+    font-size:.85em;
+    overflow:hidden;
+    padding:1.15em 0;
+    position:relative;
+    text-align:center;
+    text-transform:uppercase;
+    width:33.33%;
+
+    &.active{
+        border-bottom:3px solid #b4d455;
+    }
+
+    span{
+      z-index:1;
+      position:relative;
+    }
+  }
+}
+
+.green-splash{
+  background:#b4d455;
+  box-shadow:0 0 5px 5px #b4d455;
+  border-radius:50%;
+  height:0;
+  width:0;
+  position:absolute;
+  top:50%;
+  left:50%;
+  z-index:0;
+}
+
+.page-content-container{
+  border-radius:0 0 3px 3px;
+  overflow:hidden;
+  position:relative;
+  height:100%;
+  z-index:1;
+}
+
+.page-content{
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  z-index:1;
+
+  &.active{
+    z-index:2;
+  }
+  &.transition-to{
+    z-index:3;
+  }
+}
+
+#page-content-1{
+  background:#d67d83;
+}
+#page-content-2{
+  background:#bee1be;
+}
+#page-content-3{
+  background:#a3ebe8;
+}
