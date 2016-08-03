@@ -14,38 +14,81 @@
   <div flex>
     <div class="iphone6-container center-img">
       <div class="page-container">
-        <md-toolbar class="md-hue-2" style="height: 40px;">
-          <div class="md-toolbar-tools">
-            <h2>
-              <span>PickApp</span>
-            </h2>
-            <span flex></span>
-            <md-button class="md-icon-button" aria-label="More">
-              <i class="material-icons">search</i>
-            </md-button>
-          </div>
-        </md-toolbar>
-        <md-content layout-xs="column" layout="row" ng-repeat="card in cards">
-        <div class="col-xs-12 no-padding">
-          <md-card>
-            <img ng-src="{{card.img}}" class="md-card-image" alt="Washed Out">
-            <md-card-title>
-              <md-card-title-text>
-                <span class="md-headline">{{card.title}}</span>
-              </md-card-title-text>
-            </md-card-title>
-            <md-card-actions layout="row" layout-align="start center">
-              <md-button>Action 1</md-button>
-              <md-button>Action 2</md-button>
-            </md-card-actions>
-            <md-card-content>
-              <p>
-                The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-                two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
-              </p>
-            </md-card-content>
-          </md-card>
+        <div ng-show="showFirst">
+          <md-toolbar class="md-hue-2" style="height: 40px;">
+            <div class="md-toolbar-tools">
+              <h2>
+                <span>PickApp</span>
+              </h2>
+              <span flex></span>
+              <md-button class="md-icon-button" aria-label="More">
+                <i class="material-icons">search</i>
+              </md-button>
+            </div>
+          </md-toolbar>
+          <md-content layout-xs="column" layout="row" ng-repeat="card in cards">
+            <div class="col-xs-12 no-padding">
+              <md-card>
+                <img ng-src="{{card.img}}" class="md-card-image" alt="Washed Out">
+                <md-card-title>
+                  <md-card-title-text>
+                    <span class="md-headline">{{card.title}}</span>
+                  </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="start center">
+                  <md-button>Action 1</md-button>
+                  <md-button>Action 2</md-button>
+                </md-card-actions>
+                <md-card-content>
+                  <p>
+                    The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+                    two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+                  </p>
+                </md-card-content>
+              </md-card>
+            </div>
+          </md-content>
         </div>
+        <md-content layout-xs="column" layout="row" ng-show="showSecond">
+          <div class="col-xs-12 no-padding">
+            <div class="detail-img">
+              <md-button class="md-icon-button" aria-label="More">
+                <i class="material-icons">arrow_back</i>
+              </md-button>
+              <h4 class="detail-title">Titulo 1</h4>
+            </div>
+            <p class="md-body-1" style="font-size: 11px; line-height: 15px; padding: 0 10px; margin-top: 10px;">
+              The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+              two most important words.
+            </p>
+            <div class="detail-type">
+              <TABLE>
+                <TR>
+                  <TD><h6>Hora</h6></TD>
+                  <TD style="text-align: center;"><h6>Tipo de partido</h6></TD>
+                  <TD style="text-align: right;"><h6>Duración</h6></TD>
+                </TR>
+                <TR>
+                  <TD>18:00</TD>
+                  <TD style="text-align: center;">3x3</TD>
+                  <TD style="text-align: center;">1:00h</TD>
+                </TR>
+              </TABLE>
+            </div>
+            <div>
+              <md-list-item class="md-2-line" style="min-height: 52px;">
+                <img style="margin-bottom: 0px;" src="http://placehold.it/40x40" class="md-avatar"/>
+                <div class="md-list-item-text" style="margin-top: 20px;">
+                  <h3 style="font-size: 13px; font-weight: 600;"> Nil Panés Coll </h3>
+                  <p style="font-size: 10px;"> Creado hace 20 min </p>
+                </div>
+              </md-list-item>
+              <div class="detail-in">
+                <h6>Apuntados</h6>
+
+              </div>
+            </div>
+          </div>
         </md-content>
       </div>
 
@@ -53,15 +96,15 @@
   </div>
   <div flex>
     <h3 class="md-headline">Why this app?</h3>
-    <md-list-item class="noright">
+    <md-list-item class="noright" ng-click="changeView('first')">
       <img ng-src="http://placehold.it/40x40" class="md-avatar" />
       <p>Lorem ipsum dolor sit amet</p>
     </md-list-item>
-    <md-list-item class="noright">
+    <md-list-item class="noright" ng-click="changeView('second')">
       <img ng-src="http://placehold.it/40x40" class="md-avatar" />
       <p>Lorem ipsum dolor sit amet.</p>
     </md-list-item>
-    <md-list-item class="noright">
+    <md-list-item class="noright" ng-click="changeView('third')">
       <img ng-src="http://placehold.it/40x40" class="md-avatar" />
       <p>Lorem ipsum dolor sit amet.</p>
     </md-list-item>

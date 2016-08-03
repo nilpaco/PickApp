@@ -255,3 +255,31 @@ md-toolbar{
   padding-right: 0px;
   padding-left: 0px;
 }
+.detail-img{
+  height: 100px;
+  background-image: url("http://placehold.it/220x100");
+}
+.detail-title{
+  display: inline-block;
+}
+.detail-type{
+  border-bottom: 1px solid rgba(0,0,0,0.27);
+  border-top: 1px solid rgba(0,0,0,0.27);
+  padding: 0 10px;
+  padding-bottom: 10px;
+}
+.detail-type td{
+  width: 33%;
+
+}
+
+.detail-type td h6{
+  font-weight: 600;
+}
+.detail-in{
+  padding: 0 10px;
+}
+.detail-in h6{
+  font-weight: 600;
+  font-size: 13px;
+}
