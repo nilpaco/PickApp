@@ -153,6 +153,7 @@ html {
   top: 77px;
   left: 16px;
   right: 15px;
+  overflow-y: scroll;
 }
 
 .page-nav{
@@ -236,4 +237,21 @@ html {
 }
 #page-content-3{
   background:#a3ebe8;
+}
+
+md-toolbar{
+  height: 40px;
+  min-height: 40px;
+  font-size: 20px;
+}
+.md-toolbar-tools > h2, .md-toolbar-tools i {
+  color: white;
+}
+.md-toolbar-tools > h2{
+  font-size: 16px;
+}
+
+.no-padding{
+  padding-right: 0px;
+  padding-left: 0px;
 }

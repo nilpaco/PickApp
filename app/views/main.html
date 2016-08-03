@@ -13,25 +13,40 @@
 <div class="padding" layout="row" layout-xs="column">
   <div flex>
     <div class="iphone6-container center-img">
-
       <div class="page-container">
-        <md-toolbar class="md-hue-2">
+        <md-toolbar class="md-hue-2" style="height: 40px;">
           <div class="md-toolbar-tools">
-            <md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
-              <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-            </md-button>
             <h2>
-              <span>pickapp</span>
+              <span>PickApp</span>
             </h2>
             <span flex></span>
-            <md-button class="md-icon-button" aria-label="Favorite">
-              <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
-            </md-button>
             <md-button class="md-icon-button" aria-label="More">
-              <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+              <i class="material-icons">search</i>
             </md-button>
           </div>
         </md-toolbar>
+        <md-content layout-xs="column" layout="row" ng-repeat="card in cards">
+        <div class="col-xs-12 no-padding">
+          <md-card>
+            <img ng-src="{{card.img}}" class="md-card-image" alt="Washed Out">
+            <md-card-title>
+              <md-card-title-text>
+                <span class="md-headline">{{card.title}}</span>
+              </md-card-title-text>
+            </md-card-title>
+            <md-card-actions layout="row" layout-align="start center">
+              <md-button>Action 1</md-button>
+              <md-button>Action 2</md-button>
+            </md-card-actions>
+            <md-card-content>
+              <p>
+                The titles of Washed Out's breakthrough song and the first single from Paracosm share the
+                two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
+              </p>
+            </md-card-content>
+          </md-card>
+        </div>
+        </md-content>
       </div>
 
     </div>
@@ -60,9 +75,11 @@
           <div>flex 33% on mobile, <br>and 66% on gt-sm devices.</div>
         </div>
         <div class="content col-md-4 col-sm-12">
+          <img ng-src="http://placehold.it/150x150" />
           flex 66%  on mobile, <br>and 33% on gt-sm devices.
         </div>
         <div class="content col-md-4 col-sm-12">
+          <img ng-src="http://placehold.it/150x150" />
           flex 66%  on mobile, <br>and 33% on gt-sm devices.
         </div>
     </div>
